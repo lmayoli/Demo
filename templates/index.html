@@ -1,0 +1,160 @@
+{%extends "base.html" %}
+{% block title %} {% endblock %}
+
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+                <p>{{msg}}</p>
+            {%endfor%}
+        {% endif%}
+    {% endwith %}
+    
+
+    </div>
+  </header>
+
+
+  <main class="px-3">
+    <img src="{{url_for('static', filename='logo.png')}}" 
+    height="300px"/>
+    <a class="btn btn-lg btn-secondary fw-bold border-white bg-white"  href={{'user'}}>Create</a>
+
+    <p class="lead">Imagine owning the bank while you use it. Blackbook wallet is a digital wallet that allows users to own their system while they use the code.</p>
+    <p class="lead">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </p>
+    <div id="foot" class="footercontainer">
+      <div class="footer1">
+        <img src="{{url_for('static', filename='cloud.png')}}" align="middle" 
+        width="150px"/>
+        <h2>Decentralized</h2>
+        <p>Blackbook wallet is a digital wallet that allows users to own their system while they use the code.</p>
+      </div>
+
+      <div class="footer2">
+        <img src="{{url_for('static', filename='lock.jpg')}}"  width="150px">
+        <h2>Secure</h2>
+        <p>Blackbook keeps users safe by using highly secure cryptography</p>
+      </div>
+
+      <div class="footer3">
+        <img src="{{url_for('static', filename='easy.png')}}"  width="150px">
+        <h2>Easy transactions</h2>
+        <p>Blackbook wallet will provide a quota of free transactions to users every month.</p>
+      </div>
+<br>
+      </div>
+      <br>
+      <br>
+      <div class="footer4">
+          <h3>About us</h3>
+          <p>This company is a DOA and it is operated by governance protocols. This means that no one has access to your account besides you. There is no CEO or Board of directors. Users will each get votes depending on how much stake they have. The company does however have developers that are constantly working on optimizing systems and operations within the app. 
+          </p>
+      </div>
+  </main>
+
+  <div id="foot" class="email">
+  <h2>contact the developers to test beta wallet</h2>
+<div id="email">
+<form action="mailto:crowdedcapinfo@gmail.com" method="post" enctype="text/plain">
+Name:
+<input type="text">
+E-mail:
+<input type="email">
+User Id:<br>
+<input type="text" size="50"><br><br>
+<input class="btn btn-lg btn-secondary fw-bold border-white bg-white" type="submit" value="Send">
+<input class="btn btn-lg btn-secondary fw-bold border-white bg-white" type="reset" value="Reset">
+</form>
+</div>
+  </div>
+
+</div>
+
+  
+    </Body>
+    <style>
+        #email{
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            font-family: 'Courier New', Courier, monospace;
+
+        }
+        #submit{
+            padding: 10px;
+            border-radius: 10px;
+            border:1px solid white;
+            background-color: white;
+            font-family: 'Courier New', Courier, monospace;
+
+
+        }
+        body{
+            background-color: rgba(2, 36, 87, 0.836);
+        }
+        .landingheader{
+            height: 5cm;
+            text-align: center;
+            position: relative;
+            margin-top: 75px;
+
+        }
+        .landingheader h1{
+            color: black;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: xx-large;
+        }
+        .mainpage{
+            text-align: center;
+        }
+        .mainpage p{
+            font-size: large;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .mainpage h2{
+         font-family: 'Courier New', Courier, monospace;
+        }
+        .mainpage input{
+            margin-top: 15px;
+        }
+        .boxcontainer{
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+        }
+        .box1{
+            background-color: none;
+            width: 175px;
+            height: 175px;
+            justify-content: center;
+            flex-grow: 1;
+        }
+        .box2{
+            background-color: white;
+            width: 175px;
+            padding-left: 15px;
+            height: 155px;
+            flex-grow: 1;
+            
+        }
+        .box3{
+            background-color: none;
+            width: 175px;
+            height: 175px;
+            flex-grow: 1;
+        }
+    
+    </style>
+    
+</html>
+    
+
+
+{% endblock %}
